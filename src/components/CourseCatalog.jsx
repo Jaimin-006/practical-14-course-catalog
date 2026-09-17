@@ -9,20 +9,22 @@ function CourseCatalog() {
   ];
 
   return (
-    <div className="p-6 max-w-xl mx-auto bg-white rounded-lg shadow-sm border border-blue-200">
-      <h2 className="text-2xl font-bold text-blue-900 mb-4 border-b border-blue-100 pb-2">
-        Department Course Catalog
-      </h2>
+    <div className="p-6 max-w-xl mx-auto bg-white rounded-xl shadow-md border border-cyan-200/80">
+      <div className="border-b border-cyan-100 pb-3 mb-4">
+        <h2 className="text-2xl font-bold bg-gradient-to-r from-teal-700 to-cyan-600 bg-clip-text text-transparent">
+          Department Course Catalog
+        </h2>
+      </div>
 
       <div className="space-y-3">
         {courseList.map(function(course) {
           return (
-            <div key={course.id} className="p-4 bg-blue-50/60 border border-blue-200 rounded-md flex justify-between items-center">
+            <div key={course.id} className="p-4 bg-teal-50/50 border border-teal-200/70 rounded-lg flex justify-between items-center transition hover:shadow-sm">
               <div>
-                <h3 className="font-bold text-blue-950 text-base">{course.title}</h3>
-                <p className="text-xs text-blue-700 mt-0.5">Course Code: <span className="font-semibold">{course.code}</span></p>
+                <h3 className="font-bold text-teal-950 text-base">{course.title}</h3>
+                <p className="text-xs text-teal-700 font-medium mt-0.5">Course Code: {course.code}</p>
               </div>
-              <span className="bg-blue-700 text-white text-xs px-3 py-1 rounded-full font-bold">
+              <span className="bg-teal-700 text-white text-xs px-3 py-1.5 rounded-full font-bold shadow-xs">
                 {course.credits} Credits
               </span>
             </div>

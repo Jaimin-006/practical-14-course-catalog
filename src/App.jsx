@@ -3,7 +3,7 @@ import CourseCatalog from './components/CourseCatalog';
 
 function App() {
   return (
-    <div className="bg-blue-50/50 min-h-screen p-8 font-sans">
+    <div className="bg-cyan-50/40 min-h-screen p-8 font-sans text-slate-800">
       <CourseCatalog />
     </div>
   );
