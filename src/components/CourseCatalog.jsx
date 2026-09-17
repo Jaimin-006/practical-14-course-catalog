@@ -9,18 +9,20 @@ function CourseCatalog() {
   ];
 
   return (
-    <div className="p-6 max-w-xl mx-auto bg-white rounded-xl shadow-md border border-gray-200">
-      <h2 className="text-2xl font-bold text-teal-700 mb-4">Department Course Catalog</h2>
+    <div className="p-6 max-w-xl mx-auto bg-white rounded-lg shadow-sm border border-blue-200">
+      <h2 className="text-2xl font-bold text-blue-900 mb-4 border-b border-blue-100 pb-2">
+        Department Course Catalog
+      </h2>
 
       <div className="space-y-3">
         {courseList.map(function(course) {
           return (
-            <div key={course.id} className="p-4 bg-teal-50 border border-teal-200 rounded-lg flex justify-between items-center">
+            <div key={course.id} className="p-4 bg-blue-50/60 border border-blue-200 rounded-md flex justify-between items-center">
               <div>
-                <h3 className="font-bold text-teal-900">{course.title}</h3>
-                <p className="text-xs text-teal-600">Course Code: {course.code}</p>
+                <h3 className="font-bold text-blue-950 text-base">{course.title}</h3>
+                <p className="text-xs text-blue-700 mt-0.5">Course Code: <span className="font-semibold">{course.code}</span></p>
               </div>
-              <span className="bg-teal-600 text-white text-xs px-3 py-1 rounded-full font-bold">
+              <span className="bg-blue-700 text-white text-xs px-3 py-1 rounded-full font-bold">
                 {course.credits} Credits
               </span>
             </div>
