@@ -8,12 +8,17 @@ function CourseCatalog() {
     { id: 104, title: 'Cloud Computing Fundamentals', code: 'BCA-504', credits: 3 }
   ];
 
+  const totalCredits = courseList.reduce((sum, item) => sum + item.credits, 0);
+
   return (
     <div className="p-6 max-w-xl mx-auto bg-white rounded-xl shadow-md border border-cyan-200/80">
-      <div className="border-b border-cyan-100 pb-3 mb-4">
+      <div className="border-b border-cyan-100 pb-3 mb-4 flex justify-between items-center">
         <h2 className="text-2xl font-bold bg-gradient-to-r from-teal-700 to-cyan-600 bg-clip-text text-transparent">
           Department Course Catalog
         </h2>
+        <span className="text-xs bg-teal-100 text-teal-800 font-bold px-2.5 py-1 rounded-md border border-teal-200">
+          Total: {totalCredits} Credits
+        </span>
       </div>
 
       <div className="space-y-3">
