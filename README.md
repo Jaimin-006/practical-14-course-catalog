@@ -1,4 +1,4 @@
-# Practical 14: College Course Directory & Department Student List Rendering
+# Practical 14: Student Registration Form (Controlled Component)
 
 ## How to Run
 ```bash
